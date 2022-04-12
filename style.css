@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 body {
     padding: 0;
@@ -15,8 +15,6 @@ nav {
 }
 nav > * {
     margin: 20px;
-    content: '';
-    transform: translateX(-50%);
     background-image: linear-gradient(90deg, red, purple);
     background-position: center bottom;
     background-size: 0 3px;
@@ -35,7 +33,7 @@ nav > *:hover {
     margin-top: 50px;
     text-align: center;
 }
-.profile div {
+.section-heading {
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 30px;
@@ -55,4 +53,73 @@ nav > *:hover {
     object-fit: cover;
     width: 100%;
     height: 275px;
+}
+#about {
+    margin-top: 15px;
+    text-align: center;
+    margin-inline: 200px;
+}
+
+#about > .rust {
+    font-weight: bolder;
+}
+
+
+#skills {
+    text-align: center;
+    margin-top: 20px;
+}
+.skills-grid{
+    margin-inline: 200px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    gap: 10px;
+}
+
+.skill-bar {
+    --percentage: 50%;
+    --skill-name: 'coding';
+    display: grid;
+    grid-template-columns: var(--percentage) auto;
+    height: 30px;
+    line-height: 25px;
+}
+
+.skill-name-sport {
+    --percentage: 15%;
+    --skill-name: 'sport';
+}
+.skill-name-gaming {
+    --percentage: 70%;
+    --skill-name: 'gaming';
+}
+.skill-name-typing {
+    --percentage: 80%;
+    --skill-name: 'typing';
+}
+.skill-bar::before {
+    content: var(--skill-name);
+    background: #ebcb8b;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 10px;
+    text-align: left;
+}
+.skill-bar::after {
+    content: '';
+    background: #3b4252;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#favourites {
+    text-align: center;
+    margin-top: 30px;
+}
+#favourites > .section-heading > svg {
+    transform: translateY(4px);
+}
+.favourites-grid {
+
 }
