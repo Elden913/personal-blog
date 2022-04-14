@@ -1,5 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+:root{
+    --accent-color:#a82828;
+    --secondary-color:#f83c3c;
+    --hover-color: #be2525;
+    --shadow-color: rgba(221,50,50,0.6);
+    --text-color: white;
+    --gradient:linear-gradient(45deg, var(--accent-color),var(--secondary-color));
+}
+
+
+button{
+    /* background-color: var(--accent-color); */
+    background-image: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-size: 200%;
+    background-position: left;
+    color: var(--text-color);
+    font-size: 1.1em;
+    padding: 1.25rem;
+    border-radius: 0.7rem;
+    border: 0;
+    /* transition: background-color 500ms, box-shadow 500ms, transform 100ms; */
+    transition: background-position 500ms, box-shadow 500ms, transform 100ms;
+    box-shadow: 0px 15px 40px -8px var(--shadow-color);
+    text-transform: uppercase;
+}
+button:hover{
+    /* background-color: var(--hover-color); */
+    transition-timing-function: linear, cubic-bezier(0.07, 2.03, 0, 0.97), linear;
+    background-position: right;
+    transform:scale(1.01,1.01);
+    box-shadow: 0px 12px 49px 3px var(--shadow-color);
+}
+button:active{
+    transform:scale(0.97,0.97);
+}
 body {
     padding: 0;
     margin: 0;
@@ -37,6 +76,7 @@ nav > *:hover {
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 30px;
+    text-align: center;
 }
 .profile img {
     border-radius: 50%;
@@ -121,5 +161,46 @@ nav > *:hover {
     transform: translateY(4px);
 }
 .favourites-grid {
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    grid-template-rows: 1fr 1fr;
+    margin-inline: 50px;
+    row-gap: 20px;
+}
+.favourites-grid > img {
+    width: 80%;
+    margin: auto;
+}
+.favourites-text-1 {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.favourites-text-1 > div {
+    margin: 0;
+    margin-bottom: 10px;
+}
+#education > img {
+    margin-bottom: 15px;
+}
+#education {
+    margin-bottom: 30px;
+}
+.portofolio-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    width: 750px;
+    height: 500px;
+    overflow: hidden;
+}
+button div {
+    overflow: hidden;
+    height: 100%;
+}
+button img {
+    width: 700px;
 }
