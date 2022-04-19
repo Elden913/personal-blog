@@ -88,7 +88,7 @@ nav > *:hover {
     position: absolute;
     top: 0;
     z-index: -10;
-    background-image: url("./background photo.jpg");
+    background-image: url("./img/background photo.jpg");
     background-position: center center;
     object-fit: cover;
     width: 100%;
