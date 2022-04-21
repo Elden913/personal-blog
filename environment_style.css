@@ -3,13 +3,15 @@
 .background {
     background-image: linear-gradient(transparent, rgba(98, 175, 101, 0.5)), url("img/earth\ background.jpg");
     background-size: cover;
-    position: fixed;
-    width: 100vw;
+    position: absolute;
+    width: 100%;
     height: 100vh;
     z-index: -100;
 }
-body {
+.top-part-thing {
+    width: 100%;
     margin: 0;
+    overflow: hidden; 
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -46,4 +48,60 @@ a {
 a:hover {
     background-size: 100% 100%;
     color: black;
+}
+.middle-part-thing {
+    margin-top: 20px;
+    background: white;
+}
+.middle-part-thing * {
+    text-align: center;
+}
+.middle-part-thing h2 {
+    color: black;
+}
+h3 {
+    color: darkolivegreen;
+}
+.middle-part-thing p {
+    margin-top: 5px;
+    margin-inline: 30px;
+    color: #303030;
+}
+.highlights-on-environmental-study {
+    margin-block: 30px;
+    background-image: linear-gradient(transparent, rgba(98, 175, 101, 0.5), transparent);
+}
+.disaster p {
+    color: #303030;
+    margin-top: 10px;
+}
+.disaster {
+    display: flex;
+    align-items: center;
+    margin-inline: 50px;
+}
+.disaster > div {
+    flex-basis: 60%;
+    margin-right: 50px;
+}
+.disaster > div * {
+    text-align: center;
+}
+.disaster img {
+    flex-basis: 40%;
+    border-radius: 40px;
+    padding: 30px;
+    width: 200px;
+    height: 200px;
+	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    object-fit: cover;
+}
+.disaster svg {
+    border: 2px darkolivegreen solid;
+    padding: 3px;
+    border-radius: 5px;
+    transform: translateY(7px);
+}
+.disaster svg * {
+    color: darkolivegreen;
 }
